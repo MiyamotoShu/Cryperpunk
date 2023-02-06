@@ -294,6 +294,7 @@ section{
     color: white;
     padding-bottom: 10px;
     padding-top:1%;
+    word-wrap: break-word;
 }
 .whitepaper .content p1
 {
@@ -531,16 +532,22 @@ section{
         transition: 0.2s all;
     }
 
-    .logoword{
-        margin-left: 10px;
-    }
-    .logoimage{
-        margin-left: 60px;
+    .btn{
+        font-size: 20px;
     }
 
     /* about game */
+    .category{
+        min-height: 0px;
+    }
+    .category .content{
+        width: 100%;
+        margin-top: 0%;
+        margin-left: 0%;
+        padding: 20px;
+    }
     .category .content h3{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .category .content p{
@@ -551,9 +558,20 @@ section{
     }
 
     /* whitepaper */
+    .whitepaper{
+        min-height: 0px;
+    }
+
+    .whitepaper .content
+    {
+        width: 100%;
+        margin-top: 0%;
+        margin-left: 0%;
+
+    }
 
     .whitepaper .content h3{
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
     }
     .whitepaper .content p{
@@ -577,8 +595,8 @@ section{
     }
 
     .roadmap .mapbox img {
-        width: 550px;
-        height: 550px;
+        width: 350px;
+        height: 500px;
         margin-right: 10%;
     }
 

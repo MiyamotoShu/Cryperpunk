@@ -48,8 +48,8 @@ const img = document.querySelector('.roadmap .mapbox img');
 
 window.addEventListener('resize', function() {
 if (window.innerWidth <= 600) {
-img.src = './images/roadmap-S.png';
+img.src = './images/roadmap_S.png';
 } else {
-img.src = './images/roadmap-02.png';
+img.src = './images/roadmap.png';
 }
 });

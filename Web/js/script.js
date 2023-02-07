@@ -14,21 +14,18 @@ menu.onclick =() =>{
       });
 }
 
+// let images = ["./images/Back/0.png","./images/Back/1.png","./images/Back/2.png","./images/Back/3.png","./images/Back/4.png","./images/Back/5.png","./images/Back/6.png","./images/Back/2.png","./images/Back/3.png","./images/Back/4.png","./images/Back/5.png","./images/Back/2.png","./images/Back/3.png","./images/Back/4.png","./images/Back/5.png","./images/Back/6.png","./images/Back/7.png","./images/Back/8.png","./images/Back/9.png"];
+// let index = 0;
 
-
-
-let images = ["./images/Back/0.png","./images/Back/1.png","./images/Back/2.png","./images/Back/3.png","./images/Back/4.png","./images/Back/5.png","./images/Back/6.png","./images/Back/2.png","./images/Back/3.png","./images/Back/4.png","./images/Back/5.png","./images/Back/2.png","./images/Back/3.png","./images/Back/4.png","./images/Back/5.png","./images/Back/6.png","./images/Back/7.png","./images/Back/8.png","./images/Back/9.png"];
-let index = 0;
-
-setInterval(function () {
-    index = (index + 1) % images.length;
-    let bgImg = new Image();
-    bgImg.src = images[index];
-    bgImg.onerror = function () {
-      bgImg.src = "./images/Back/0.png";
-    };
-    document.querySelector('.home').style.backgroundImage = `url(${bgImg.src})`;
-}, 100);
+// setInterval(function () {
+//     index = (index + 1) % images.length;
+//     let bgImg = new Image();
+//     bgImg.src = images[index];
+//     bgImg.onerror = function () {
+//       bgImg.src = "./images/Back/0.png";
+//     };
+//     document.querySelector('.home').style.backgroundImage = `url(${bgImg.src})`;
+// }, 100);
 
 let animation = document.querySelector('.heading');
 setInterval(function(){
@@ -45,7 +42,6 @@ element.addEventListener('mouseout', function () {
 
 
 const img = document.querySelector('.roadmap .mapbox img');
-
 window.addEventListener('resize', function() {
 if (window.innerWidth <= 600) {
 img.src = "./images/Roadmap_S.png";

@@ -495,7 +495,7 @@ section{
 
 /* ---- RWD ---- */
 
-@media (max-width: 600px){
+@media (max-width: 767px){
     /* header */
     #menu-bar {
         display: initial;

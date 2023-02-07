@@ -536,7 +536,8 @@ section{
 
     .introduce
     {
-        background-attachment: scroll;
+    height: 100%;
+    background-attachment: scroll;
     }
 
     /* about game */

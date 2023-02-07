@@ -189,7 +189,6 @@ section{
     margin: 0 auto;
     height: 800px;
     padding: 40px;
-    font: 24px 'Arial';
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -536,6 +535,11 @@ section{
         font-size: 20px;
     }
 
+    .introduce
+    {
+    height: 100%;
+    }
+
     /* about game */
     .category{
         min-height: 0px;
@@ -595,7 +599,7 @@ section{
     }
 
     .roadmap .mapbox img {
-        width: 350px;
+        width: 100%;
         height: 500px;
         margin-right: 10%;
     }

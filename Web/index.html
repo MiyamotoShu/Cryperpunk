@@ -89,17 +89,18 @@
            <!-- contact -->
         <div class="contactbox" id="contact">
             <h1 class="heading">CONTACT<hr /></h1>
-            <form action="">
+            <form action="" id="myForm">
                 <div class="inputbox">
-                    <input type="text" placeholder="Name" >
+                    <input type="text" id="name" placeholder="Name" >
                     <br>
-                    <input type="email" placeholder="Email">
+                    <input type="email" id="email" placeholder="Email">
                     <br>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" id="comments" cols="30" rows="10"></textarea>
                     <br>
-                    <input type="submit" value="CONTACT" class="btn3">
+                    <input type="submit" id="submitButton" value="CONTACT" class="btn3">
                 </div>
             </form>
+            <iframe src="https://script.google.com/macros/s/AKfycbyEHGb1GenpWkwzvv7PeRanImMzGeztWFSRixGlZHE8iSzlztuNuhUrPnSFAhAVZmuW/exec"
         </div> 
         
     </section> 
@@ -122,5 +123,26 @@
 
 </body>
     <!-- js -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js">
+        function getValues() {
+            var webAppUrl = "https://script.google.com/macros/s/AKfycbyEHGb1GenpWkwzvv7PeRanImMzGeztWFSRixGlZHE8iSzlztuNuhUrPnSFAhAVZmuW/exec";
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var comments = document.getElementById("comments");
+
+            var rowDate = {
+                name:name.value,
+                email:email.value,
+                comments:comments.value
+            };
+
+            google.script.run.addDate(rowDate);
+            document.getElementById("myForm").reset();
+            alert("Thanks for your message. We'll get back to you as soon as possible!");
+        }
+
+        document.getElementById("submitButton").addEventListener("click", getValues);
+
+    </script>
 </html>
+  

@@ -89,7 +89,7 @@
            <!-- contact -->
         <div class="contactbox" id="contact">
             <h1 class="heading">CONTACT<hr /></h1>
-            <form id="myForm">
+            <form action="url" id="myForm">
                 <div class="inputbox">
                     <input type="text" id="name" placeholder="Name" required>
                     <br>
@@ -125,25 +125,31 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="./js/script.js"></script>
     <script>
+        const url = 'https://script.google.com/macros/s/AKfycbzvJVKkRuhuQeis9t3InvKyxjgQwZxnSiddapyCKLUcMR-X_UZOaJ9KIIybET0FJwJp/exec';
+      
         function getValues() {
-            var webAppUrl = "https://script.google.com/macros/s/AKfycbzvJVKkRuhuQeis9t3InvKyxjgQwZxnSiddapyCKLUcMR-X_UZOaJ9KIIybET0FJwJp/exec";
-            var name = document.getElementById("name");
-            var email = document.getElementById("email");
-            var comments = document.getElementById("comments");
-
-            var rowDate = {
-                name:name.value,
-                email:email.value,
-                comments:comments.value
-            };
-
-            google.script.run.withSuccessHandler(function() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var comments = document.getElementById("comments").value;
+      
+          var rowData = {
+            name: name,
+            email: email,
+            comments: comments
+          };
+      
+          google.script.run.withSuccessHandler(function() {
             document.getElementById("myForm").reset();
             alert("Thanks for your message. We'll get back to you as soon as possible!");
-        }).addDate(rowDate);
+          }).addDate(rowData);
         }
-
-        document.getElementById("submitButton").addEventListener("click", getValues);
+      
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+          getValues();
+        });
+      </script>
+      
 
     </script>
 </html>

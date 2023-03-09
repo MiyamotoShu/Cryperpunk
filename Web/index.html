@@ -89,7 +89,7 @@
            <!-- contact -->
            <div class="contactbox" id="contact">
             <h1 class="heading">CONTACT<hr /></h1>
-            <form action="" id="myForm">
+            <form id="myForm">
                 <div class="inputbox">
                     <input type="text" id="name" placeholder="Name" required>
                     <br>
@@ -144,8 +144,10 @@
         }).addDate(rowDate);
     }
 
-    document.getElementById("submitButton").addEventListener("click", getValues);
-
+    document.getElementById("submitButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    getValues();
+    });
     </script>
 </html>
   

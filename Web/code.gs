@@ -1,8 +1,7 @@
 function doGet() {
-  var html=HtmlService.createHtmlOutputFromFile("index")
-  var check=html.evaluate();
-  var show =check.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-  return show;
+  var template = HtmlService.createTemplateFromFile('index.html');
+  var html = template.evaluate();
+  return html.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
 function addDate(rowDate) {
